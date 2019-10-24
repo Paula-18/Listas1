@@ -44,5 +44,28 @@ namespace ListBox
             txtbox3.Text = "";
 
         }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            if(lstColores.SelectedIndex != -1)
+            {
+                Colores.RemoveAt(lstColores.SelectedIndex);
+            }
+        }
+
+        private void lstColores_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtboxNombreA.Text = Colores[lstColores.SelectedIndex].Nombre;
+            txtboxHexA.Text = Colores[lstColores.SelectedIndex].Hexadecimal;
+            txtboxRgbA.Text = Colores[lstColores.SelectedIndex].RGB;
+        }
+
+        private void btnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstColores.SelectedIndex != -1)
+            {
+                
+            }
+        }
     }
 }
